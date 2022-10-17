@@ -1,0 +1,148 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios-coursePackageTests.xctest/Contents/MacOS/ios-coursePackageTests",
+      "productName" : "ios-coursePackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.ios-course-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Sources/ios-course/ios_course.swift"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "ios_course",
+      "moduleOutputPath" : "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.swiftmodule",
+      "objects" : [
+        "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.build/ios_course.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "ios_course_main",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.build/ios_course.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Sources/ios-course/ios_course.swift"
+      ],
+      "tempsPath" : "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.ios-courseTests-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Tests/ios-courseTests/ios_courseTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios-course"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "ios_courseTests",
+      "moduleOutputPath" : "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_courseTests.swiftmodule",
+      "objects" : [
+        "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_courseTests.build/ios_courseTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx11.0",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_courseTests.build/ios_courseTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_courseTests.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Tests/ios-courseTests/ios_courseTests.swift"
+      ],
+      "tempsPath" : "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_courseTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}

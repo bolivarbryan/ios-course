@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)"
+options: "062684519fc0ef3abcbdc7a35900ef32edbdaf12090075ccdb4bbe14529dcb55"
+build_start_time: [1666035853, 601539134]
+build_end_time: [1666035853, 902462005]
+inputs:
+  "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Sources/ios-course/ios_course.swift": [1666035839, 587965965]

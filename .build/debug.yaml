@@ -1,0 +1,93 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "ios-course-debug.exe": ["<ios-course-debug.exe>"]
+  "ios-course-debug.module": ["<ios-course-debug.module>"]
+  "ios-coursePackageTests-debug.test": ["<ios-coursePackageTests-debug.test>"]
+  "ios-courseTests-debug.module": ["<ios-courseTests-debug.module>"]
+  "main": ["<ios-course-debug.exe>","<ios-course-debug.module>"]
+  "test": ["<ios-course-debug.exe>","<ios-course-debug.module>","<ios-coursePackageTests-debug.test>","<ios-courseTests-debug.module>"]
+default: "main"
+nodes:
+  "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Sources/ios-course/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Tests/ios-courseTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "<ios-course-debug.exe>":
+    tool: phony
+    inputs: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios-course"]
+    outputs: ["<ios-course-debug.exe>"]
+
+  "<ios-course-debug.module>":
+    tool: phony
+    inputs: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.build/ios_course.swift.o","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.swiftmodule"]
+    outputs: ["<ios-course-debug.module>"]
+
+  "<ios-coursePackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios-coursePackageTests.xctest/Contents/MacOS/ios-coursePackageTests"]
+    outputs: ["<ios-coursePackageTests-debug.test>"]
+
+  "<ios-courseTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_courseTests.build/ios_courseTests.swift.o","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_courseTests.swiftmodule"]
+    outputs: ["<ios-courseTests-debug.module>"]
+
+  "C.ios-course-debug.exe":
+    tool: shell
+    inputs: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.build/ios_course.swift.o"]
+    outputs: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios-course"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/ios-course"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug","-o","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios-course","-module-name","ios_course","-emit-executable","-Xlinker","-alias","-Xlinker","_ios_course_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios-course.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.5/macosx","-target","arm64-apple-macosx10.13","-Xlinker","-add_ast_path","-Xlinker","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.swiftmodule","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.ios-course-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Sources/ios-course/ios_course.swift"]
+    outputs: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.build/ios_course.swift.o","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "ios_course"
+    module-output-path: "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.swiftmodule"
+    import-paths: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug"]
+    temps-path: "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.build"
+    objects: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.build/ios_course.swift.o"]
+    other-args: ["-target","arm64-apple-macosx10.13","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-g","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","ios_course_main","-parse-as-library","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"]
+    sources: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Sources/ios-course/ios_course.swift"]
+    is-library: false
+    enable-whole-module-optimization: false
+    num-threads: 10
+
+  "C.ios-coursePackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.build/ios_course.swift.o","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_courseTests.build/ios_courseTests.swift.o"]
+    outputs: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios-coursePackageTests.xctest/Contents/MacOS/ios-coursePackageTests"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/ios-coursePackageTests.xctest/Contents/MacOS/ios-coursePackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug","-o","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios-coursePackageTests.xctest/Contents/MacOS/ios-coursePackageTests","-module-name","ios_coursePackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios-coursePackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.5/macosx","-target","arm64-apple-macosx11.0","-Xlinker","-add_ast_path","-Xlinker","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_courseTests.swiftmodule","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.ios-courseTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Tests/ios-courseTests/ios_courseTests.swift","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios-course"]
+    outputs: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_courseTests.build/ios_courseTests.swift.o","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_courseTests.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "ios_courseTests"
+    module-output-path: "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_courseTests.swiftmodule"
+    import-paths: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug"]
+    temps-path: "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_courseTests.build"
+    objects: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_courseTests.build/ios_courseTests.swift.o"]
+    other-args: ["-target","arm64-apple-macosx11.0","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-g","-j10","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib"]
+    sources: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Tests/ios-courseTests/ios_courseTests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 10
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Sources/ios-course/","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Tests/ios-courseTests/","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Package.swift","/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

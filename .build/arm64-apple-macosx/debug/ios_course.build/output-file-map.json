@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.build/master.swiftdeps"
+  },
+  "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/Sources/ios-course/ios_course.swift": {
+    "dependencies": "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.build/ios_course.d",
+    "object": "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.build/ios_course.swift.o",
+    "swiftmodule": "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.build/ios_course~partial.swiftmodule",
+    "swift-dependencies": "/Users/bolivarbryan/Developer/homework/ios-curso/ios-course/.build/arm64-apple-macosx/debug/ios_course.build/ios_course.swiftdeps"
+  }
+}
